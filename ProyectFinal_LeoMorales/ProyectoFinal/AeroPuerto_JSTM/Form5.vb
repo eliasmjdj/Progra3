@@ -38,4 +38,18 @@ Public Class Ventanilla
         TxtNumVuelo.Enabled = False
         ComboBox1.Enabled = False
     End Sub
+
+    Private Sub TxtHorario_TextChanged(sender As Object, e As EventArgs) Handles TxtHorario.TextChanged
+        Dim numero As Integer
+
+        If Integer.TryParse(ComboBox1.Text, numero) Then
+            Console.WriteLine("La entrada es un número.")
+        Else
+            Console.WriteLine("La entrada no es un número.")
+        End If
+    End Sub
+
+    Private Sub Button3_Click(sender As Object, e As EventArgs) Handles Button3.Click
+
+    End Sub
 End Class
